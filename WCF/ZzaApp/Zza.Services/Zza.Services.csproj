@@ -46,8 +46,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -58,11 +65,17 @@
   <ItemGroup>
     <Compile Include="IZzaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZzaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Zza.Data\Zza.Data.csproj">
+      <Project>{BB1E80DE-E6D1-4E29-BC2D-DB66B81163C5}</Project>
+      <Name>Zza.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Zza.Entities\Zza.Entities.csproj">
       <Project>{7EC71C6E-E769-4C9E-8327-C72B0724B1B7}</Project>
       <Name>Zza.Entities</Name>

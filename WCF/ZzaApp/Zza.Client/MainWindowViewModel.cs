@@ -100,31 +100,31 @@ namespace Zza.Client
 
         private void OnSubmitOrder()
         {
-            //if (_CurrentOrder.CustomerId != Guid.Empty && _CurrentOrder.OrderItems.Count > 0)
-            //{
-            //    ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
-            //    try
-            //    {
-            //        proxy.SubmitOrder(_CurrentOrder);
-            //        CurrentOrder = new Order();
-            //        CurrentOrder.OrderDate = DateTime.Now;
-            //        CurrentOrder.OrderStatusId = 1;
-            //        Items = new ObservableCollection<OrderItemModel>();
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Error saving order, please try again later.");
-            //        // Log it
-            //    }
-            //    finally
-            //    {
-            //        proxy.Close();
-            //    }
-            //}
-            //else
-            //{
-            //    MessageBox.Show("You must select a customer and add order items to submit an order");
-            //}
+            if (_CurrentOrder.CustomerId != Guid.Empty && _CurrentOrder.OrderItems.Count > 0)
+            {
+                ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
+                try
+                {
+                    proxy.SubmitOrder(_CurrentOrder);
+                    CurrentOrder = new Order();
+                    CurrentOrder.OrderDate = DateTime.Now;
+                    CurrentOrder.OrderStatusId = 1;
+                    Items = new ObservableCollection<OrderItemModel>();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error --{ex.Message}-- saving order, please try again later.");
+                    // Log it
+                }
+                finally
+                {
+                    proxy.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("You must select a customer and add order items to submit an order");
+            }
         }
     }
 }

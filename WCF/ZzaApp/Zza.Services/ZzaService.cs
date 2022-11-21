@@ -38,7 +38,7 @@ namespace Zza.Services
             {
                 // Allow etc...
             }
-            if (ClaimsPrincipal.Current.Claims.Any(x => x.Type == ClaimTypes.Name || x.Value == @"MPG-DT2021\mpg"))
+            if (ClaimsPrincipal.Current.Claims.Any(x => x.Type == ClaimTypes.Name || x.Value == @"ExampleComputer\username"))
             {
                 // Deny etc...
             }

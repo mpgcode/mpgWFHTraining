@@ -138,7 +138,7 @@
       <wsa10:EndpointReference>
         <wsa10:Address>net.tcp://localhost:2113/Zza</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
-          <Upn>MPG-DT2021\mpg</Upn>
+          <Upn>ExampleComputer\username</Upn>
         </Identity>
       </wsa10:EndpointReference>
     </wsdl:port>

@@ -83,6 +83,10 @@ namespace Zza.Client
             // Hand coded Proxy
             ZzaProxy proxy = new ZzaProxy("NetTcpBinding_IZzaService");
 
+            // Note that you can use Alternate Credentials
+            //proxy.ClientCredentials.Windows.ClientCredential.UserName = @"ExampleComputer\username";
+            //proxy.ClientCredentials.Windows.ClientCredential.Password = @"AlternateCredentialPassword";
+
             // Auto generated proxy
             //ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
 

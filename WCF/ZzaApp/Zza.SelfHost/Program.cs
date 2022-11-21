@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Zza.Services;
 
@@ -15,6 +16,7 @@ namespace Zza.SelfHost
         {
             try
             {
+                var principal = Thread.CurrentPrincipal;
                 using (ServiceHost host = new ServiceHost(typeof(ZzaService)))
                 {
                     host.Open();

@@ -80,7 +80,11 @@ namespace Zza.Client
 
         private void LoadProductsAndCustomers()
         {
-            ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
+            // Hand coded Proxy
+            ZzaProxy proxy = new ZzaProxy("NetTcpBinding_IZzaService");
+
+            // Auto generated proxy
+            //ZzaServiceClient proxy = new ZzaServiceClient("NetTcpBinding_IZzaService");
 
             try
             {

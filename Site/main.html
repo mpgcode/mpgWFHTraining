@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US"></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="MPG">
+    <meta name="description" content="Samples">
+    <meta name="viewport" conent="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <Title>MPG Test Page</Title>
+</head>
+
+<body>
+    <p>
+        <label for="dateFrom">Date From:</label>
+        <br>
+        <input type="text" name="dateFrom" id="dateFrom" value="01/13/2023 12:00">
+    </p>
+    <p>
+        <label for="dateTo">Date To:</label>
+        <br>
+        <input type="text" name="dateTo" id="dateTo" value="01/18/2023 00:00">
+    </p>
+
+    <br>
+
+    <button id="testInputsButton" type="submit" value="Button Value" onclick="TestInputs()">
+        Test Inputs
+    </button>
+    
+    <br>
+    <br>
+
+    <button id="testButtonDateFromChanged" type="submit" value="Button Value" onclick="DateFrom_Updated(this)">
+        Test: DateFrom_Changed
+    </button>
+
+    <br>
+    <br>
+
+    <button id="testButtonDateToChanged" type="submit" value="Button Value" onclick="DateTo_Updated(this)">
+        Test: DateTo_Changed
+    </button>
+
+    <br>
+    <br>
+
+    <label for="Output1">Output1</label>
+    <p id="Output1"></p>
+    <p id="Output2"></p>
+    <p id="Output3"></p>
+
+</body>

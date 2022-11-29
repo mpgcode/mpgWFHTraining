@@ -1,0 +1,37 @@
+1
+document.addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+
+2
+document.addEventListener("click", function(){
+  document.getElementById("demo").innerHTML = "Hello World";
+}); 
+
+3
+var button = document.getElementById("button");
+button.addEventListener("click", function(event){
+   alert(event.target);
+});
+
+4
+HTML
+<div id="buttonCollection">
+    <div class="buttonRow"><button type="submit" class="testbuttons" onClick="return false;">Test Inputs</button></div>
+    <div class="buttonRow"><button type="submit" class="testbuttons" onClick="return false;">Test: DateFrom_Changed</button></div>
+    <div class="buttonRow"><button type="submit" class="testbuttons" onClick="return false;">Test: DateTo_Changed</button></div>
+</div>
+
+CSS
+#buttonCollection
+{
+    width:100%;
+    text-align:left;
+}
+.buttonRow
+{
+    display: inline-block;
+}
+

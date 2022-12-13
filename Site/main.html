@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-US"></html>
+<html lang="en-US">
+
+</html>
+
 <head>
     <meta charset="utf-8">
     <meta name="author" content="MPG">
@@ -16,7 +19,7 @@
     <p>
         <label for="dateFrom">Date From:</label>
         <br>
-        <input type="text" name="dateFrom" id="dateFrom" value="01/13/2023 12:00">
+        <input type="text" name="dateFrom" id="dateFrom" value="01/13/2023 12:30">
     </p>
     <p>
         <label for="dateTo">Date To:</label>
@@ -24,32 +27,48 @@
         <input type="text" name="dateTo" id="dateTo" value="01/18/2023 00:00">
     </p>
 
+    <div class="HorizontalLine"></div>
     <br>
 
     <button id="testInputsButton" type="submit" value="Button Value" onclick="TestInputs()">
         Test Inputs
     </button>
-    
     <br>
+    <br>
+    <label for="Output1">Test Output:</label>
+    <p id="Output1"></p>
+
+    <br>
+    <div class="HorizontalLine"></div>
     <br>
 
     <button id="testButtonDateFromChanged" type="submit" value="Button Value" onclick="DateFrom_Updated(this)">
         Test: DateFrom_Changed
     </button>
-
-    <br>
-    <br>
-
+    &nbsp;
     <button id="testButtonDateToChanged" type="submit" value="Button Value" onclick="DateTo_Updated(this)">
         Test: DateTo_Changed
     </button>
-
     <br>
     <br>
 
-    <label for="Output1">Output1</label>
-    <p id="Output1"></p>
+    <label for="Output2">Test Output:</label>
     <p id="Output2"></p>
+
+    <br>
+    <div class="HorizontalLine"></div>
+    <br>
+
+    <button id="sliceTest" type="submit" value="Button Value" onclick="SliceTest()">
+        Test: SliceTest
+    </button>
+    <br>
+    <br>
+
+    <label for="Output3">Test Output:</label>
     <p id="Output3"></p>
 
+    <br>
+    <div class="HorizontalLine"></div>
+    <br>
 </body>

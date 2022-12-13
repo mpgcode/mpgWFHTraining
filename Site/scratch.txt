@@ -35,3 +35,14 @@ CSS
     display: inline-block;
 }
 
+5
+myArray.forEach(element => console.log(element));
+
+myArray.forEach(TestFunction);
+myArray.forEach(element => TestFunction(element));
+
+function TestFunction(whatever)
+{
+    console.log(whatever);
+}
+
